@@ -1,0 +1,13 @@
+{{#if author}}
+  <h1>{{firstName}} {{lastName}}</h1>
+{{/if}}
+
+{{#each comments}}
+  {{> userMessage tagName="h2" }}
+{{/each}}
+
+if (author) {
+  return <h1>{firstName} {lastName}</h1>;
+}
+
+return comments.map((comment) => <UserMessage tagName="h2">);

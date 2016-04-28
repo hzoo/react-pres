@@ -10,11 +10,14 @@ export default class Interactive extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
+    console.log('handleClick');
     this.setState({
       count: this.state.count + 1
     });
   }
   render() {
+    console.log('render');
+    console.log(`count: ${this.state}`);
     const styles = {
       padding: 20,
       background: "black",

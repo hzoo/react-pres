@@ -1,0 +1,29 @@
+<!-- counter.template -->
+<html>
+  <body>
+    <button id="update">CLICK ME</button>
+    <div id="counter">The button has been clicked 0 times</div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript">
+      // counter.js
+      function render(input) {
+        console.log('render');
+        console.log('count:', input);
+        if (input >= 5) {
+          $("#counter").html("EASY THERE PAL");
+        } else {
+          $("#counter").html("The button has been clicked " + input + " times");
+        }
+      }
+
+      var count = 0;
+
+      $("#update").click(function() {
+        console.log('handleClick');
+        count++;
+        render(count);
+      });
+    </script>
+  </body>
+</html>

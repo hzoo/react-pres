@@ -1,0 +1,13 @@
+function Counter(input) {
+  return <div>'value is' + input</div>;
+}
+
+Counter(0); // <div>value is 0</div>
+Counter(1); // <div>value is 1</div>
+Counter(2); // <div>value is 2</div>
+
+function Counter(props) {
+  return <div>value is {props.count}</div>;
+}
+
+ReactDOM.render(<Counter count="1"/>, document.body);
